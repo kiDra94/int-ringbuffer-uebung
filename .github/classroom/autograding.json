@@ -1,0 +1,88 @@
+{
+  "tests": [
+    {
+      "name": "Creation",
+      "setup": "mkdir -p build && cd build; cmake ..; make -j4",
+      "run": "cd build; ./int_ring_buffer_test [new]",
+      "timeout": 5,
+      "points": 10
+    },
+    {
+      "name": "Add Elements",
+      "setup": "mkdir -p build && cd build; cmake ..; make -j4",
+      "run": "cd build; ./int_ring_buffer_test [push]",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "Remove Elements",
+      "setup": "mkdir -p build && cd build; cmake ..; make -j4",
+      "run": "cd build; ./int_ring_buffer_test [pop]",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "Wrap-around",
+      "setup": "mkdir -p build && cd build; cmake ..; make -j4",
+      "run": "cd build; ./int_ring_buffer_test [wrap]",
+      "timeout": 1,
+      "points": 15
+    },
+    {
+      "name": "Overwrite Oldest Element",
+      "setup": "mkdir -p build && cd build; cmake ..; make -j4",
+      "run": "cd build; ./int_ring_buffer_test [overwrite]",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "Element Access",
+      "setup": "mkdir -p build && cd build; cmake ..; make -j4",
+      "run": "cd build; ./int_ring_buffer_test [at]",
+      "timeout": 1,
+      "points": 5
+    },
+    {
+      "name": "Count Number of Matches",
+      "setup": "mkdir -p build && cd build; cmake ..; make -j4",
+      "run": "cd build; ./int_ring_buffer_test [count]",
+      "timeout": 1,
+      "points": 5
+    },
+    {
+      "name": "Clear the Buffer",
+      "setup": "mkdir -p build && cd build; cmake ..; make -j4",
+      "run": "cd build; ./int_ring_buffer_test [clear]",
+      "timeout": 1,
+      "points": 5
+    },
+    {
+      "name": "Copy (Rule of Three)",
+      "setup": "mkdir -p build && cd build; cmake ..; make -j4",
+      "run": "cd build; ./int_ring_buffer_test [copy]",
+      "timeout": 1,
+      "points": 15
+    },
+    {
+      "name": "Print Buffer to Stream",
+      "setup": "mkdir -p build && cd build; cmake ..; make -j4",
+      "run": "cd build; ./int_ring_buffer_test [ostream]",
+      "timeout": 1,
+      "points": 5
+    },
+    {
+      "name": "Const Correctness",
+      "setup": "mkdir -p build && cd build; cmake ..; make -j4",
+      "run": "cd build; ./int_ring_buffer_test [const]",
+      "timeout": 1,
+      "points": 5
+    },
+    {
+      "name": "Performance",
+      "setup": "mkdir -p build && cd build; cmake ..; make -j4",
+      "run": "cd build; ./int_ring_buffer_test [performance]",
+      "timeout": 1,
+      "points": 5
+    }
+  ]
+}
